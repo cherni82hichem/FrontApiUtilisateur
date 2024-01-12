@@ -1,0 +1,18 @@
+<table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Prénom</th>
+      </tr>
+    </thead>
+    <tbody>
+        <div *ngIf="utilisateurs && utilisateurs.length == 0">
+            <p>aucun utilisateur trouvé</p>
+        </div>
+        
+      <tr *ngFor="let utilisateur of utilisateurs">
+        <td>{{ utilisateur.prenom }}</td>
+        <td>{{ utilisateur.nom }}</td>
+      </tr>
+    </tbody>
+  </table>
